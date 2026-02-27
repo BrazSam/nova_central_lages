@@ -14,18 +14,30 @@
     }
 
     .hero {
-        height: 100vh;
-        background: url('../img/capa.jpg') center/cover no-repeat;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    }
+
+    .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/nova_central_lages/img/igrejaproximo.jpeg") center/cover no-repeat;
+    filter: blur(2px);
+    transform: scale(1.1);
+    z-index: 0;
     }
 
     .overlay {
+        position: relative;
         background: rgba(0,0,0,0.6);
         padding: 50px;
         border-radius: 15px;
+        z-index: 1;
     }
 
     .section-padding {
